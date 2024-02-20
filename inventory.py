@@ -28,22 +28,21 @@ servers = [
             "_use_sudo_password": os.environ["SSH_PASSWORD"],
         },
     ),
+    # (
+    #     "vm306.local.lan",
+    #     {
+    #         "ssh_user": os.environ["SSH_USER"],
+    #         "ssh_key": os.environ["SSH_KEY"],
+    #         "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+    #         "_use_sudo_password": os.environ["SSH_PASSWORD"],
+    #     },
+    # ),
     (
-        "vm306.local.lan",
+        "hp-laptop-ubuntu.local.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
             "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
-            "_use_sudo_password": os.environ["SSH_PASSWORD"],
-        },
-    ),
-    (
-        "timothy-hp-laptop.local.lan",
-        {
-            "ssh_user": os.environ["SSH_USER"],
-            "ssh_key": os.environ["SSH_KEY"],
-            "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
-            "ssh_port": os.environ["SSH_PORT"],
             "_use_sudo_password": os.environ["SSH_PASSWORD"],
         },
     ),
