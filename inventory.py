@@ -2,15 +2,6 @@ import os
 
 servers = [
     (
-        "ct102.local.lan",
-        {
-            "ssh_user": os.environ["SSH_USER"],
-            "ssh_key": os.environ["SSH_KEY"],
-            "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
-            "_use_sudo_password": os.environ["SSH_PASSWORD"],
-        },
-    ),
-    (
         "vm304.local.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
@@ -28,17 +19,35 @@ servers = [
             "_use_sudo_password": os.environ["SSH_PASSWORD"],
         },
     ),
-    # (
-    #     "vm306.local.lan",
-    #     {
-    #         "ssh_user": os.environ["SSH_USER"],
-    #         "ssh_key": os.environ["SSH_KEY"],
-    #         "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
-    #         "_use_sudo_password": os.environ["SSH_PASSWORD"],
-    #     },
-    # ),
+    (
+        "vm306.local.lan",
+        {
+            "ssh_user": os.environ["SSH_USER"],
+            "ssh_key": os.environ["SSH_KEY"],
+            "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "_use_sudo_password": os.environ["SSH_PASSWORD"],
+        },
+    ),
+    (
+        "vm307.local.lan",
+        {
+            "ssh_user": os.environ["SSH_USER"],
+            "ssh_key": os.environ["SSH_KEY"],
+            "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "_use_sudo_password": os.environ["SSH_PASSWORD"],
+        },
+    ),
     (
         "hp-laptop-ubuntu.local.lan",
+        {
+            "ssh_user": os.environ["SSH_USER"],
+            "ssh_key": os.environ["SSH_KEY"],
+            "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "_use_sudo_password": os.environ["SSH_PASSWORD"],
+        },
+    ),
+    (
+        "pihole2.local.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
@@ -81,15 +90,6 @@ proxmox = [
 ]
 
 special = [
-    (
-        "pihole2.local.lan",
-        {
-            "ssh_user": os.environ["SSH_USER"],
-            "ssh_key": os.environ["SSH_KEY"],
-            "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
-            "_use_sudo_password": os.environ["SSH_PASSWORD"],
-        },
-    ),
     (
         "rasberrypi.local.lan",
         {
