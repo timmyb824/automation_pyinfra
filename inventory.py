@@ -2,7 +2,7 @@ import os
 
 servers = [
     (
-        "vm304.local.lan",
+        "watchyourlan.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
@@ -11,7 +11,7 @@ servers = [
         },
     ),
     (
-        "vm305.local.lan",
+        "actualbudget.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
@@ -20,7 +20,7 @@ servers = [
         },
     ),
     (
-        "vm306.local.lan",
+        "adguard.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
@@ -29,7 +29,7 @@ servers = [
         },
     ),
     (
-        "vm307.local.lan",
+        "podman-01.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
@@ -38,7 +38,7 @@ servers = [
         },
     ),
     (
-        "hp-laptop-ubuntu.local.lan",
+        "hp-laptop-ubuntu.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
@@ -47,7 +47,25 @@ servers = [
         },
     ),
     (
-        "pihole2.local.lan",
+        "pihole2.homelab.lan",
+        {
+            "ssh_user": os.environ["SSH_USER"],
+            "ssh_key": os.environ["SSH_KEY"],
+            "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "_use_sudo_password": os.environ["SSH_PASSWORD"],
+        },
+    ),
+    (
+        "logging.homelab.lan",
+        {
+            "ssh_user": os.environ["SSH_USER"],
+            "ssh_key": os.environ["SSH_KEY"],
+            "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "_use_sudo_password": os.environ["SSH_PASSWORD"],
+        },
+    ),
+    (
+        "prometheus.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
@@ -59,12 +77,20 @@ servers = [
 
 db = [
     (
-        "vm303.local.lan",
+        "mongodb.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
             "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
-            "ssh_port": os.environ["SSH_PORT"],
+            "_use_sudo_password": os.environ["SSH_PASSWORD"],
+        },
+    ),
+    (
+        "postgresql.homelab.lan",
+        {
+            "ssh_user": os.environ["SSH_USER"],
+            "ssh_key": os.environ["SSH_KEY"],
+            "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
             "_use_sudo_password": os.environ["SSH_PASSWORD"],
         },
     ),
@@ -72,19 +98,21 @@ db = [
 
 proxmox = [
     (
-        "pve2.local.lan",
+        "proxmox2.homelab.lan",
         {
-            "ssh_user": os.environ["SSH_USER_PVE"],
+            "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
             "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "_use_sudo_password": os.environ["SSH_PASSWORD"],
         },
     ),
     (
-        "pve3.local.lan",
+        "proxmox3.homelab.lan",
         {
-            "ssh_user": os.environ["SSH_USER_PVE"],
+            "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
             "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "_use_sudo_password": os.environ["SSH_PASSWORD"],
         },
     ),
 ]
@@ -102,7 +130,17 @@ special = [
 
 k8s = [
     (
-        "vm310.local.lan",
+        "vm310.homelab.lan",
+        {
+            "ssh_user": os.environ["SSH_USER"],
+            "ssh_key": os.environ["SSH_KEY"],
+            "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "ssh_port": 22,
+            "_use_sudo_password": os.environ["SSH_PASSWORD"],
+        },
+    ),
+    (
+        "vm313.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
@@ -111,47 +149,42 @@ k8s = [
         },
     ),
     (
-        "vm313.local.lan",
+        "vm314.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
             "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "ssh_port": 22,
             "_use_sudo_password": os.environ["SSH_PASSWORD"],
         },
     ),
     (
-        "vm314.local.lan",
+        "vm320.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
             "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "ssh_port": 22,
             "_use_sudo_password": os.environ["SSH_PASSWORD"],
         },
     ),
     (
-        "vm320.local.lan",
+        "vm321.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
             "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "ssh_port": 22,
             "_use_sudo_password": os.environ["SSH_PASSWORD"],
         },
     ),
     (
-        "vm321.local.lan",
+        "vm322.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
             "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
-            "_use_sudo_password": os.environ["SSH_PASSWORD"],
-        },
-    ),
-    (
-        "vm322.local.lan",
-        {
-            "ssh_user": os.environ["SSH_USER"],
-            "ssh_key": os.environ["SSH_KEY"],
-            "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "ssh_port": 22,
             "_use_sudo_password": os.environ["SSH_PASSWORD"],
         },
     ),
@@ -159,7 +192,7 @@ k8s = [
 
 oci = [
     (
-        "homelab-oci01.local.lan",
+        "homelab-oci01.homelab.lan",
         {
             "ssh_user": "ubuntu",
             "ssh_key": os.environ["SSH_KEY"],
@@ -167,7 +200,7 @@ oci = [
         },
     ),
     (
-        "homelab-oci03.local.lan",
+        "homelab-oci03.homelab.lan",
         {
             "ssh_user": "opc",
             "ssh_key": os.environ["SSH_KEY"],

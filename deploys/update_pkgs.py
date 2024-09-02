@@ -1,6 +1,6 @@
 from pyinfra import host
 from pyinfra.api.deploy import deploy
-from pyinfra.facts.server import LinuxName
+from pyinfra.facts.server import Hostname, LinuxName
 from pyinfra.operations import apt, dnf, server
 
 
@@ -20,6 +20,7 @@ UPDATE_FUNCTIONS = {
     "Ubuntu": _apt_update,
     "Raspbian GNU/Linux": _apt_update,
     "Oracle Linux Server": _dnf_update,
+    "Debian": _apt_update,
 }
 
 

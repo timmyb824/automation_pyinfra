@@ -7,6 +7,7 @@ UPGRADE_FUNCTIONS = {
     "Ubuntu": apt.upgrade,
     "Raspbian GNU/Linux": apt.upgrade,
     "Oracle Linux Server": dnf.update,
+    "Debian": apt.upgrade,
 }
 
 
