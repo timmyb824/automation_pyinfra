@@ -119,7 +119,7 @@ proxmox = [
 
 special = [
     (
-        "rasberrypi.local.lan",
+        "rasberrypi.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
             "ssh_key": os.environ["SSH_KEY"],
