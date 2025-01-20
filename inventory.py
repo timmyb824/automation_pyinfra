@@ -2,6 +2,24 @@ import os
 
 servers = [
     (
+        "unbound.homelab.lan",
+        {
+            "ssh_user": os.environ["SSH_USER"],
+            "ssh_key": os.environ["SSH_KEY"],
+            "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "_use_sudo_password": os.environ["SSH_PASSWORD"],
+        },
+    ),
+    (
+        "unbound2.homelab.lan",
+        {
+            "ssh_user": os.environ["SSH_USER"],
+            "ssh_key": os.environ["SSH_KEY"],
+            "ssh_key_password": os.environ["SSH_KEY_PASSWORD"],
+            "_use_sudo_password": os.environ["SSH_PASSWORD"],
+        },
+    ),
+    (
         "watchyourlan.homelab.lan",
         {
             "ssh_user": os.environ["SSH_USER"],
